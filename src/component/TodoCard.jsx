@@ -1,8 +1,16 @@
 import React from 'react'
 
-function TodoCard() {
+function TodoCard(props) {
+  const {children} = props
+  console.log(children)
   return (
-    <div>TodoCard</div>
+    <li className='todoItem'>
+      <p>{children}</p>
+        <div className='actionsContainer'>
+          <i class="fa-solid fa-pen-to-square"></i>
+          <i class="fa-solid fa-trash"></i>
+        </div>
+    </li>
   )
 }
 

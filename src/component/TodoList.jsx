@@ -1,15 +1,18 @@
 import React from 'react'
+import TodoCard from './TodoCard';
 
-function TodoList() {
-
-    //initializing the array initially
-    let todos = [
-        'Go to gym',
-        'Hey jude wassup'
-    ];
-
+function TodoList(props) {
+  const {todos} = props
   return (
-    <div>{todos[0]}</div>
+    <ul className='main'>
+      {todos.map((todo,todoIndex)=>{
+        return(
+          <TodoCard key={todoIndex}>
+            <p>{todo}</p>
+          </TodoCard>
+        );
+      })}
+    </ul>
   )
 }
 
