@@ -5,7 +5,7 @@ function TodoList() {
     //initializing the array initially
     let todos = [
         'Go to gym',
-        'Hey jude'
+        'Hey jude wassup'
     ];
 
   return (
